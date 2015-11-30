@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <reinexp translate="title" module="inkygroup_reinexp">
+            <title>Inky slider menu</title>
+            <sort_order>100</sort_order>
+            <action>inkyslider/adminhtml_slider</action>
+        </reinexp>
+    </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <reinexp translate="title" module="inkygroup_reinexp">
+                        <title>Inky slider menu item</title>
+                        <sort_order>100</sort_order>
+                    </reinexp>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+
+</config>
+

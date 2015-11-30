@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout>
+
+<cms_index_index translate="label">
+
+    <reference name="head">
+        <action method="setTitle">
+            <title>Main Page - Welcome to Inky group Extention</title>
+        </action>
+    </reference>
+
+    <reference name="content">
+
+        <block type="inkygroup_reinexp/slider" name="slider_on_homepage" template="inkygroup_reinexp/slider.phtml"/>
+
+        <remove name="right.poll"/>
+        <remove name="paypal.partner.right.logo"/>
+    </reference>
+
+</cms_index_index>
+</layout>

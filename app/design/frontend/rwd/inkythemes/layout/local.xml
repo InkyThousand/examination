@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+
+        <reference name="head">
+            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+
+            <action method="addItem"><type>skin_css</type><name>css/inky_styles.css</name></action>
+
+            <action method="addItem"><type>skin_css</type><name>css/skitter.styles.css</name></action>
+
+            <action method="addItem"><type>skin_js</type><script>js/jquery.skitter.js</script></action>
+
+            <action method="addItem"><type>skin_js</type><script>js/jquery.easing.1.3.js</script></action>
+
+            <action method="addJs"><script>lib/jquery/jquery-2.1.1.min.js</script></action>
+        </reference>
+
+    </default>
+
+</layout>

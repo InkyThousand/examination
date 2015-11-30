@@ -1,0 +1,32 @@
+<?php
+$slide = $this->getSliderCollection();
+?>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.box_skitter_large').skitter({
+            theme: 'minimalist',
+            dots: true,
+            preview: true,
+            numbers_align: 'center'
+        });
+    });
+</script>
+<div class="border_box">
+    <div class="box_skitter box_skitter_large">
+        <ul>
+            <?php
+            foreach ($slide as $item) {
+                if ($item->getStatus() != 0) {
+            ?>
+                    <li><a href="#<?php echo $item->getName(); ?>">
+                            <img src="/media/inkyslider/<?php echo $item->getImagefile(); ?>" class="circles" alt="<?php echo $item->getAlt(); ?>"/></a>
+
+                        <div class="label_text"><p><?php echo $item->getName(); ?></p></div>
+                    </li>
+            <?php
+                }
+            }
+            ?>
+        </ul>
+    </div>
+</div>
