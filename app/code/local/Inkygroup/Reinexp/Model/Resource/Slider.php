@@ -10,7 +10,7 @@ class Inkygroup_Reinexp_Model_Resource_Slider extends Mage_Core_Model_Resource_D
 
     public function _construct()
     {
-        $this->_init('inkyslider/slider', 'slide_id');
+        $this->_init('inkygroup_reinexp/slider', 'slide_id');
     }
 
 }

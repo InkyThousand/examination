@@ -26,7 +26,7 @@ $methods = array(
   )
 );
 foreach ($methods as $method) {
-    Mage::getModel('inkyslider/slider')
+    Mage::getModel('inkygroup_reinexp/slider')
         ->setData($method)
         ->save();
 }

@@ -7,8 +7,9 @@
  */
 class Inkygroup_Reinexp_Block_Slider extends Mage_Core_Block_Template
 {
+
     public function getSliderCollection(){
-        $sliderCollection = Mage::getModel('inkyslider/slider')->getCollection();
+        $sliderCollection = Mage::getModel('inkygroup_reinexp/slider')->getCollection();
         $sliderCollection->setOrder('slide_id', 'ASC');
         return $sliderCollection;
     }

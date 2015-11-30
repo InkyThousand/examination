@@ -8,7 +8,7 @@
 class Inkygroup_Reinexp_Model_Inkycargo extends Mage_Shipping_Model_Carrier_Abstract implements Mage_Shipping_Model_Carrier_Interface
 {
 
-    protected $_code = 'reinexp_shipping';
+    protected $_code = 'inkygroup_reinexp';
 
     public function collectRates(Mage_Shipping_Model_Rate_Request $request)
     {
@@ -19,7 +19,7 @@ class Inkygroup_Reinexp_Model_Inkycargo extends Mage_Shipping_Model_Carrier_Abst
 
         $result = Mage::getModel('shipping/rate_result');
         $show = true;
-        if($show){ // This if condition is just to demonstrate how to return success and error in shipping methods
+        if($show){
 
             $method = Mage::getModel('shipping/rate_result_method');
             $method->setCarrier($this->_code);

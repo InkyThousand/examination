@@ -39,35 +39,35 @@
         </blocks>
 
         <models>
-            <inkyslider>
+            <inkygroup_reinexp>
                 <class>Inkygroup_Reinexp_Model</class>
-                <resourceModel>inkyslider_resource</resourceModel>
-            </inkyslider>
+                <resourceModel>inkygroup_reinexp_resource</resourceModel>
+            </inkygroup_reinexp>
 
-            <inkyslider_resource>
+            <inkygroup_reinexp_resource>
                 <class>Inkygroup_Reinexp_Model_Resource</class>
                 <entities>
                     <slider>
                         <table>inky_slider_items</table>
                     </slider>
                 </entities>
-            </inkyslider_resource>
+            </inkygroup_reinexp_resource>
 
         </models>
 
         <resources>
-            <inkyslider_setup>
+            <inkygroup_reinexp_setup>
                 <setup>
                     <module>Inkygroup_Reinexp</module>
                     <class>Mage_Customer_Model_Entity_Setup</class>
                 </setup>
-            </inkyslider_setup>
+            </inkygroup_reinexp_setup>
         </resources>
     </global>
 
     <admin>
         <routers>
-            <inkyslider>
+            <inkygroup_reinexp>
                 <use>admin</use>
                 <args>
                     <module>Inkygroup_Reinexp</module>
@@ -78,21 +78,22 @@
                         <inkygroup_reinexp before="Mage_Adminhtml">Inkygroup_Reinexp_Adminhtml</inkygroup_reinexp>
                     </module>
                 </args>-->
-            </inkyslider>
+            </inkygroup_reinexp>
         </routers>
 
     </admin>
 
     <default>
         <carriers>
-            <reinexp_shipping>
+            <inkygroup_reinexp>
                 <active>1</active>
                 <model>inkygroup_reinexp/inkycargo</model>
                 <title>Inky Post</title>
                 <name>Inky Shipping Method</name>
                 <price>5.00</price>
                 <sallowspecific>1</sallowspecific>
-            </reinexp_shipping>
+                <specificerrmsg>This shipping method is currently unavailable.</specificerrmsg>
+            </inkygroup_reinexp>
         </carriers>
     </default>
 

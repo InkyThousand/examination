@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <sections>
-        <carriers translate="label" module="shipping">
+        <carriers>
             <groups>
-                <reinexp translate="label">
+                <inkygroup_reinexp translate="label">
                     <label>Inky Rein Shipping Method</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>2</sort_order>
@@ -57,7 +57,7 @@
                             <can_be_empty>1</can_be_empty>
                         </specificcountry>
                     </fields>
-                </reinexp>
+                </inkygroup_reinexp>
             </groups>
         </carriers>
     </sections>

@@ -11,7 +11,7 @@ class Inkygroup_Reinexp_Model_Resource_Slider_Collection extends  Mage_Core_Mode
     public function _construct()
     {
         parent::_construct();
-        $this->_init('inkyslider/slider');
+        $this->_init('inkygroup_reinexp/slider');
     }
 
 }

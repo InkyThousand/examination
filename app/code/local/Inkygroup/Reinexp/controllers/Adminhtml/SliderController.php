@@ -23,7 +23,7 @@ class Inkygroup_Reinexp_Adminhtml_SliderController extends Mage_Adminhtml_Contro
     public function editAction()
     {
         $id = (int) $this->getRequest()->getParam('slide_id');
-        Mage::register('slider_edit', Mage::getModel('inkyslider/slider')->load($id));
+        Mage::register('slider_edit', Mage::getModel('inkygroup_reinexp/slider')->load($id));
         $this->loadLayout()->_setActiveMenu('reinexp');
         $this->_addContent($this->getLayout()->createBlock('inkygroup_reinexp/adminhtml_slider_edit'));
         $this->renderLayout();
@@ -35,7 +35,7 @@ class Inkygroup_Reinexp_Adminhtml_SliderController extends Mage_Adminhtml_Contro
         if ($data = $this->getRequest()->getPost()) {
             try {
                 $helper = Mage::helper('inkygroup_reinexp');
-                $model = Mage::getModel('inkyslider/slider');
+                $model = Mage::getModel('inkygroup_reinexp/slider');
 
                 $model->setData($data)->setId($id);
                 if (!$model->getCreated()) {
@@ -82,7 +82,7 @@ class Inkygroup_Reinexp_Adminhtml_SliderController extends Mage_Adminhtml_Contro
         if (is_array($news) && sizeof($news) > 0) {
             try {
                 foreach ($news as $id) {
-                    Mage::getModel('inkyslider/slider')->setId($id)->delete();
+                    Mage::getModel('inkygroup_reinexp/slider')->setId($id)->delete();
                 }
                 $this->_getSession()->addSuccess($this->__('Slides have been deleted (Total: %d)', sizeof($news)));
             } catch (Exception $e) {

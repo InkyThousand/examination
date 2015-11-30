@@ -9,7 +9,7 @@ class Inkygroup_Reinexp_Block_Adminhtml_Slider_Grid extends Mage_Adminhtml_Block
 {
     protected function _prepareCollection()
     {
-        $collection = Mage::getModel('inkyslider/slider')->getCollection();
+        $collection = Mage::getModel('inkygroup_reinexp/slider')->getCollection();
 
         $this->setCollection($collection);
         return parent::_prepareCollection();
