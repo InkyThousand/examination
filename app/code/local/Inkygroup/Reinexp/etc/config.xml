@@ -15,6 +15,19 @@
                 </inkygroup_reinexp>
             </updates>
         </layout>
+
+        <events>
+            <sales_order_payment_save_before>
+                <observers>
+                    <inkygroup_reinexp>
+                        <type>singleton</type>
+                        <class>Inkygroup_Reinexp_Model_Observer</class>
+                        <method>customerPoints</method>
+                    </inkygroup_reinexp>
+                </observers>
+            </sales_order_payment_save_before>
+        </events>
+
     </frontend>
 
     <global>
@@ -85,16 +98,29 @@
 
     <default>
         <carriers>
-            <inkygroup_reinexp>
+            <inkygroup_shipping>
                 <active>1</active>
                 <model>inkygroup_reinexp/inkycargo</model>
                 <title>Inky Post</title>
                 <name>Inky Shipping Method</name>
-                <price>5.00</price>
-                <sallowspecific>1</sallowspecific>
+                <price>15.00</price>
+                <sallowspecific>0</sallowspecific>
                 <specificerrmsg>This shipping method is currently unavailable.</specificerrmsg>
-            </inkygroup_reinexp>
+            </inkygroup_shipping>
         </carriers>
+
+        <payment>
+            <inkygroup_payment>
+                <model>inkygroup_reinexp/inkypay</model>
+                <active>1</active>
+                <order_status>pending</order_status>
+                <title>Points for Customer</title>
+                <sort_order>12</sort_order>
+                <exchange_rates>2</exchange_rates>
+            </inkygroup_payment>
+        </payment>
+
+
     </default>
 
 </config>

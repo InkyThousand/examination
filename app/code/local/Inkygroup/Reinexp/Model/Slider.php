@@ -12,6 +12,7 @@ class Inkygroup_Reinexp_Model_Slider extends Mage_Core_Model_Abstract
     {
         parent::_construct();
         $this->_init('inkygroup_reinexp/slider');
+
     }
     protected function _afterDelete()
     {
